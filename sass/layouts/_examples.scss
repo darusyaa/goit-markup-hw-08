@@ -1,0 +1,44 @@
+.examples {
+    padding-top: 0;
+}
+
+.examples-container {
+    @extend %container;
+}
+
+.examples__title {
+    @extend %title;
+}
+
+.examples__list {
+    @extend %list;
+
+    display: flex;
+    padding-bottom: 0;
+    margin-right: 0;
+}
+
+.examples__item {
+    position: relative;
+
+    &:not(:first-child) {
+        margin-left: 30px;
+    }
+}
+
+.examples__text {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 27px 0px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: $white-color;
+    background-color: rgba(47, 48, 58, 0.8);
+}

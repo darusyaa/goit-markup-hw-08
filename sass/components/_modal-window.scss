@@ -1,0 +1,60 @@
+.modal {
+    @include transitionBase(transform);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    padding: 48px 40px;
+    min-width: 528px;
+
+    background-color: $white-color;
+
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0.5);
+}
+
+
+.modal__icon {
+    width: 11px;
+    height: 11px;
+    fill: currentColor;
+}
+
+.modal__button {
+    @extend %button;
+    @include centeredFlex();
+    @include transitionBase();
+
+    position: absolute;
+    padding: 0;
+
+    right: 8px;
+    top: 8px;
+
+    cursor: pointer;
+    background-color: $white-color;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:hover, .close-btn:focus {
+        color: $accent-color;
+    }
+}
+
+.modal__title {
+    font-size: 20px;
+    line-height: 1.15;
+
+    margin-bottom: 12px;
+
+    text-align: center;
+
+    color: $title-text-color;
+}
+

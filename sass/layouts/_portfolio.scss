@@ -1,0 +1,144 @@
+.portfolio-container {
+    @extend %container;
+}
+
+.portfolio__title {
+    @extend %hidden;
+}
+
+// filtration
+.filtration__list {
+    @extend %list;
+    @include centeredFlex();
+
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.filtration__button {
+    @extend %button;
+    @include transitionThree();
+
+    padding: 6px 22px;
+
+    background-color: $secondary-bg-color;
+    color: $title-text-color;
+    cursor: pointer;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+    &:hover, &:focus {
+        background-color: $accent-color;
+        color: $white-color;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+
+    &--current {
+        background-color: $accent-color;
+        color: $white-color;
+    }
+}
+
+.filtration__item {
+    &:not(:first-child) {
+        margin-left: 8px;
+    }
+}
+
+// works-list
+.works__list {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.works-list__item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    min-height: 404px;
+    max-width: 370px;
+
+    background: $white-color;
+    border: 1px solid $cards-color;
+
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+    }
+}
+
+// work-overlay
+.work-overlay__link {
+    @extend %link;
+    @include transitionBase(box-shadow);
+
+    display: block;
+
+    &:hover, &:focus {
+        box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 0px 1px 2px rgb(0 0 0 / 8%), 0px 2px 2px rgb(0 0 0 / 12%);
+    }
+}
+
+.work-description {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-overlay__description {
+    @include transitionBase(transform);
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background-color: $work-overlay;
+
+    /* opacity: 1; */
+    transform: translateY(101%);
+
+    .work-overlay:hover &, .work-overlay:focus & {
+        transform: translateY(0);
+    }
+}
+
+.work-overlay__text {
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    color: $white-color;
+}
+
+// work-cards
+.work-cards {
+    padding: 20px 24px;
+}
+
+.work-cards__title {
+    margin-bottom: 4px;
+
+    color: $title-text-color;
+
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.work-cards__text {
+    font-size: 16px;
+    line-height: 1.88;
+    color: $primary-text-color;
+}
