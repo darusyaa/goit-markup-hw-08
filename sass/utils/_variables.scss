@@ -5,7 +5,7 @@ $accent-color: #2196F3;
 $primary-bg-color: #F5F5F5;
 $secondary-bg-color: #F5F4FA;
 $white-color: #FFFFFF;
-$logo-color: #000000;
+$black-color: #000000;
 $hero-bg-color: #2F303A;
 $address-color:  rgba(255, 255, 255, 0.6);
 $border-color: #ECECEC;
@@ -19,3 +19,7 @@ $hero-button:#188CE8;
 
 // cubic vars
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+@function lineHeight($font-size, $line-height) {
+    @return ($line-height / $font-size);
+  }

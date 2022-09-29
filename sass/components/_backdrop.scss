@@ -1,5 +1,5 @@
 .backdrop {
-    @include centeredFlex();
+    // @include centeredFlex();
     @include transitionBack(opacity, visibility);
 
     position: fixed;

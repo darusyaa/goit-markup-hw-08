@@ -1,6 +1,7 @@
 @import "./utils/variables";
 @import "./utils/placeholders";
 @import "./utils/mixins";
+@import "./utils/breakpoints";
 
 @import "./base/common";
 @import "./base/reset";
@@ -17,6 +18,7 @@
 @import "./layouts/clients";
 @import "./layouts/portfolio";
 @import "./layouts/footer";
+@import "./layouts/mobile/index"
 
 
 

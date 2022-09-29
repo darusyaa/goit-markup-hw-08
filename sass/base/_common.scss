@@ -1,8 +1,30 @@
 body {
-    background-color: $white-color;
-    color: $primary-text-color;
-
-    font-family: Roboto, sans-serif;
-    letter-spacing: 0.03em;
-    font-size: 14px;
+  background-color: $white-color;
+  color: $primary-text-color;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
 }
+
+body.modal-open {
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+// .site-nav__logo,
+// .footer-left__logo,
+// .site-nav__span {
+//   @extend %logo;
+//   @extend %link;
+
+//   @media screen and (max-width: 1199px) {
+//     @include fontPreset(700, 24px, 28px);
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     @include fontPreset(700, 26px, 31px);
+//   }
+// }

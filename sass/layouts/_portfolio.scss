@@ -1,5 +1,5 @@
 .portfolio-container {
-    @extend %container;
+    @include container();
 }
 
 .portfolio__title {
