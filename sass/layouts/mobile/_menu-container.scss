@@ -57,6 +57,10 @@
     &--current {
       color: $accent-color;
     }
+
+    &:hover, &:focus {
+      color: $accent-color;
+    }
   }
 }
 
@@ -67,24 +71,38 @@
   }
 
   &__item {
+    @include fontPreset(500, 34px, 40px, 00.02em);
+
     &:nth-child(1) {
       @include fontPreset(500, 34px, 40px, 0.02em);
       color: $accent-color;
+
+      @media screen and (max-width: 380px) {
+        font-size: 28px;
+      }
     }
 
     &:nth-child(2) {
       @include fontPreset(500, 24px, 28px, 0.02em);
       color: $primary-text-color;
+
+      @media screen and (max-width: 380px) {
+        font-size: 24px;
+      }
     }
 
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+    
   }
 
   &__link {
     @include transitionBase;
     color: inherit;
+
+    
+
   }
 }
 
