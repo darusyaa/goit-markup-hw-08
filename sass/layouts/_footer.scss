@@ -6,8 +6,7 @@
 
 .footer-container {
     @include container();
-    // @include centeredFlex($align: center, $justify: space-between);
-    // text-align: center;
+
     @media screen and(max-width: 767px) {
         text-align: center;
     }
@@ -29,11 +28,8 @@
     }
 }
 
-// footer-left & address
-// footer-log
 
 .footer-left {
-    // margin-bottom: 60px;
 
     &__logo {
         @include logo($white-color);
@@ -54,12 +50,6 @@
 
 .address {
 
-    // @media screen and (min-width: 1200px) {
-    //     text-align: left;
-
-    //     margin-bottom: 0px;
-    //     // margin-right: 70px;
-    // }
     @media screen and (min-width: 1200px) {
         text-align: left;
         margin-bottom: 0px;
@@ -73,7 +63,6 @@
     }
 
     &__link {
-        // display: block;
 
         color: $white-color;
         line-height: 1.71;
@@ -94,7 +83,6 @@
 }
 
 .footer-right {
-    // margin-bottom: 60px;
 
     &__title {
         @include fontPreset(700, 14px, 16px, 00.03em);
@@ -144,7 +132,6 @@
 
         display: block;
 
-        // padding: 20px 0px 10px 0px;
         margin-bottom: 20px;
         margin-top: 0;
 
@@ -204,12 +191,9 @@
         box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     
         font-style: normal;
-
-        // width: 100%;
     
         &:hover, &:focus {
             background-color: #188CE8;
-            // box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
         }
     
         &::after {
@@ -224,185 +208,4 @@
         }
     }
 }
-
-// @media screen and (min-width: 1200px) {
-
-// }
-// .footer-subscribe__text {
-//     padding: 20px 0px 10px 0px;
-//     margin-bottom: 20px;
-//     margin-top: 0;
-
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14px;
-
-//     text-transform: uppercase;
-//     color: $white-color;
-// }
-
-
-// .footer-left__logo {
-//     @extend %logo;
-//     @extend %link;
-
-//     margin-bottom: 20px;
-//     display: block;
-
-//     color: $white-color;
-// }
-
-// .footer-left__span {
-//     color: $accent-color;
-// }
-
-// .address__item {
-//     &:not(last-child) {
-//         margin-bottom: 9px
-//     }
-// }
-
-// .address__list {
-//     @extend %list;
-// }
-
-// .address__link {
-//     @extend %link;
-
-//     display: block;
-//     color: $white-color;
-//     line-height: 1.71;
-//     font-style: normal;
-// }
-
-// .address__link--add {
-//     @include transitionBase();
-
-//     color: $address-color;
-
-//     &:hover, &:focus {
-//         color: $accent-color;
-//     }
-// }
-
-// footer-right
-// .footer-right__title {
-//     margin-bottom: 20px;
-
-//     text-transform: uppercase;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     color: $white-color;
-// }
-
-// .footer-right__list {
-//     @extend %list;
-
-//     display: flex;
-// }
-// .footer-right__item {
-//     &:not(:last-child) {
-//         margin-right: 10px;
-//     }
-// }
-
-// .footer-right__link {
-//     @extend %link;
-//     @extend %social-link;
-//     @include transitionBase(background-color);
-
-//     background-color: $footer-social-bg;
-
-//     &:hover, &:focus {
-//         color: $white-color;
-//         background-color: $accent-color;
-//     }
-// }
-
-// .footer-right__icon {
-//     @extend %social-icon;
-
-//     fill: $white-color;
-// }
-
-// footer-subscribe & form-footer
-// .form-footer {
-//     display: flex;
-// }
-
-// .footer-subscribe__text {
-//     padding: 20px 0px 10px 0px;
-//     margin-bottom: 20px;
-//     margin-top: 0;
-
-//     font-weight: 700;
-//     font-size: 14px;
-//     line-height: 1.14px;
-
-//     text-transform: uppercase;
-//     color: $white-color;
-// }
-
-// .form-footer__input {
-//     @include transitionBase($border-color);
-
-//     width: 358px;
-//     margin: 0;
-//     padding: 13px 16px;
-
-//     border-radius: 4px;
-//     border: 1px solid $border-form-color;
-//     background-color: $hero-bg-color;
-//     color: $white-color;
-
-//     &::placeholder {
-//         color: $address-color;
-//         font-family: inherit;
-//         font-size: 100%;
-//         font-size: 16px;
-//         line-height: 1.15;
-//     }
-// }
-
-// .form-footer__button {
-//     @extend %button;
-//     @include centeredFlex(inline-flex);
-//     @include transitionBase(background-color);
-
-//     border: none;
-
-//     margin: 0;
-//     padding: 8px 29px;
-
-//     border-radius: 4px;
-//     background-color: $accent-color;
-//     box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-//     color: $white-color;
-//     font-family: inherit;
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 16px;
-//     line-height: 1.87;
-//     letter-spacing: 0.06em;
-//     cursor: pointer;
-
-//     min-height: 43px;
-//     margin-left: 12px;
-
-//     &:hover, &:focus {
-//         background-color: #188CE8;
-//         // box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-//     }
-
-//     &::after {
-//     content: '';
-//     display: inline-block;
-
-//     width: 24px;
-//     height: 20px;
-
-//     margin-left: 10px;
-//     background-image: url(../images/icons/send.svg);
-//     }
-// }
 
