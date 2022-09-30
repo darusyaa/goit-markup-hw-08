@@ -7,14 +7,33 @@
 .footer-container {
     @include container();
     // @include centeredFlex($align: center, $justify: space-between);
-    text-align: center;
+    // text-align: center;
+    @media screen and(max-width: 767px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+        column-gap: 165px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 0;
+        display: flex;
+    }
 }
 
 // footer-left & address
 // footer-log
 
 .footer-left {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
 
     &__logo {
         @include logo($white-color);
@@ -26,9 +45,27 @@
             color: $accent-color;
         }
     }
+
+    @media screen and (max-width: 1199px){
+        margin-bottom: 60px;
+    }
+
 }
 
 .address {
+
+    // @media screen and (min-width: 1200px) {
+    //     text-align: left;
+
+    //     margin-bottom: 0px;
+    //     // margin-right: 70px;
+    // }
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+        margin-bottom: 0px;
+        margin-right: 70px;
+    }
+
     &__item {
         &:not(:last-child) {
             margin-bottom: 9px;
@@ -57,7 +94,7 @@
 }
 
 .footer-right {
-    margin-bottom: 60px;
+    // margin-bottom: 60px;
 
     &__title {
         @include fontPreset(700, 14px, 16px, 00.03em);
@@ -90,6 +127,15 @@
     
         fill: $white-color;
     }
+
+    @media screen and (max-width: 1199px){
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-right: auto;
+        margin-bottom: 0%;
+    }
 }
 
 .footer-subscribe {
@@ -98,7 +144,7 @@
 
         display: block;
 
-        padding: 20px 0px 10px 0px;
+        // padding: 20px 0px 10px 0px;
         margin-bottom: 20px;
         margin-top: 0;
 
@@ -110,9 +156,13 @@
 .form-footer {
     &__input {
         @include transitionBase($border-color);
+
+        display: block;
+
     
-        width: 358px;
-        margin: 0;
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
         padding: 13px 16px;
         margin-bottom: 20px;
     
@@ -127,6 +177,17 @@
             font-size: 100%;
             font-size: 16px;
             line-height: 1.15;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 450px
+        }
+
+        @media screen and (min-width: 1200px) {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-right: 12px;
+            width: 358px;
         }
     }
 
@@ -143,6 +204,8 @@
         box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     
         font-style: normal;
+
+        // width: 100%;
     
         &:hover, &:focus {
             background-color: #188CE8;
@@ -162,6 +225,9 @@
     }
 }
 
+// @media screen and (min-width: 1200px) {
+
+// }
 // .footer-subscribe__text {
 //     padding: 20px 0px 10px 0px;
 //     margin-bottom: 20px;
