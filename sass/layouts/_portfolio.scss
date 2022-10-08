@@ -48,11 +48,6 @@
         @include flexWrap();
 
     }
-
-    // &__item {
-    //     background: $white-color;
-    //     border: 1px solid $cards-color;
-    // }
 }
 
 .work-overlay {
@@ -152,22 +147,11 @@
             max-width: 304px;
         }
     }
-}
 
-.work-cards__title {
-    @include fontPreset(700, 18px, 36px, 0.06em);
-    margin-bottom: 4px;
-
-    color: $title-text-color;
-
-    @media screen and (min-width: 768px) and (max-width:1199px){
-        max-width: 304px;
+    &__text {
+        font-size: 16px;
+        line-height: 1.88;
+        color: $primary-text-color;
     }
-}
-
-.work-cards__text {
-    font-size: 16px;
-    line-height: 1.88;
-    color: $primary-text-color;
 }
 

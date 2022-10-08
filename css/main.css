@@ -1161,21 +1161,6 @@ a {
     max-width: 304px;
   }
 }
-
-.work-cards__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  margin-bottom: 4px;
-  color: #212121;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .work-cards__title {
-    max-width: 304px;
-  }
-}
-
 .work-cards__text {
   font-size: 16px;
   line-height: 1.88;
